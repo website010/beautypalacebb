@@ -1,0 +1,98 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 500px;
+    margin: 250px;
+    font-family: 'outfit';
+    background-image: url(parlour.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.contact-center{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-center-title hr{
+    border: none;
+    width: 250px;
+    height: 1px;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.background-box {
+    background-color: black;
+    padding: 18px;
+    border-radius: 5px;
+    margin-bottom:20px;
+}
+.contact-center-title h1{
+    color: #11ed4b;
+}
+.contact-center-title h6{
+   color: aliceblue;
+   margin-left: 80px;
+   font-family: Orbitron;
+}
+.contact-inputs{
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: rgb(122, 122, 123);
+    border-radius: 50px;
+}
+.contact-center textarea{
+    height: 80px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid rgb(81, 23, 23);
+}
+
+
+.submit button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: antiquewhite;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.info_section {
+    text-align: center;
+   
+}
+.info_section h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  
+@media (max-width:1000px){
+    .contact-inputs{
+        width:80vw;
+    }
+    
+}

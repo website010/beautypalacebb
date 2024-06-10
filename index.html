@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contact Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+<div class="contact-container">
+  <form id="submit-form" action="https://api.web3forms.com/submit" method="POST" class="contact-center">
+    <div class="contact-center-title">
+      <div class="background-box">
+    <h1>Beauty Palace</h1>
+    <h6>BEAUTY SOLUTION</h6>
+    </div>
+    </div>
+    <input type="hidden" name="access_key" value="86293d51-0e93-46c5-8498-c48f08460865">
+    <label>FULL NAME</label>
+    <input type="text" name="name" placeholder=" Name" class="contact-inputs" required>
+    <label>EMAIL</label>
+    <input type="email" name="email" placeholder=" Email" class="contact-inputs" required>
+    <label>PHONE NUMBER</label>
+    <input type="tel" name="mobile no" placeholder="Mobile no" class="contact-inputs" required>
+    <label>WHATSAPP NUMBER</label>
+    <input type="tel" name="whatsapp no" placeholder="Mobile no" class="contact-inputs" required>
+    <label>DATE OF BIRTH</label>
+    <input type="date" name="DOB" placeholder="Date of birth" class="contact-inputs" required>
+    <label>GENDER</label>
+    <div class="gender">
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label></div>
+    <label>DO YOU HAVE A BEAUTY PARLOUR ?</label>
+    <div class="beauty parlour">
+      <input type="radio" id="yes" name="beauty parlour" value="yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="No" name="beauty parlour" value="No">
+      <label for="No">No</label>
+    </div>
+    <input type="text" name="beauty parlour name" placeholder="beauty parlour name" class="contact-inputs" > 
+    <label>ADDRESS</label>
+    <textarea name="address" placeholder="Address" class="contact-inputs" required></textarea> 
+    <input type="text" name="pincode" placeholder="pincode" pattern="[0-9]{6}" title="Pin code must be 6 digits" class="contact-inputs">
+    <div class="submit">
+    <button type="submit">submit</button>
+    </div>
+  <div class="contact-right">
+    
+  </div>
+</div>
+<div>
+  <br><br><br><br><br><br><br><br><br>
+<div class="info_section">
+  <a href="Beautypalace2004@gmail.com" class="link-box">
+    <div class="detail-box">
+      <h6>
+        Beautypalace2004@gmail.com
+      </h6>
+      <br> 
+      <a href="tel:9633365112" class="link-box">
+        <div class="detail-box">
+          <h6>
+            Call  9633365112
+          </h6>
+         
+ </form>
+          
+</div>
+</div>
+<script>
+  $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbwEpX4Rf4RKkjfcExCA0XMKBGqoZ0cr_8AHiDdq7Scab0npd60t8LOT6jTe9WF4uqXgTw/exec",
+          data:$("#submit-form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              window.location.reload()
+              //window.location.href="https://google.com"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
+  function answerYes() {
+            document.getElementById('response').style.display = 'block';
+        }
+
+  
+  
+</script>
+</body>
+</html>
